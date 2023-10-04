@@ -1,6 +1,6 @@
 import tkinter as tk
 
-constante1,constante2,constante3,constante4, constante5, constante6 = 0,0,0,0,0,0
+constante1,constante2,constante3,constante4, constante5, constante6 = 300,400,500,400,-0.005,0.005
 # Función para manejar el cierre de la ventana
 def cerrar_ventana():
     global constante1, constante2, constante3, constante4, constante5, constante6

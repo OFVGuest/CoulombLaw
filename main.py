@@ -57,13 +57,21 @@ class Ball:
 initial_velocity1 = [0, 0]  # [vx, vy] en m/s
 initial_velocity2 = [0, 0]  # [vx, vy] en m/s
 
+try:
+    iniX0 = int(elipse.entry_constante1.get())
+    iniY0 = int(elipse.entry_constante2.get())
+    iniX1 = int(elipse.entry_constante3.get())
+    iniY1 = int(elipse.entry_constante4.get())
+    carga0 = float(elipse.entry_constante5.get())
+    carga1 = float(elipse.entry_constante6.get())
+except:
+    iniX0 = elipse.constante1
+    iniY0 = elipse.constante2
+    iniX1 = elipse.constante3
+    iniY1 = elipse.constante4
+    carga0 = elipse.constante5
+    carga1 = elipse.constante6
 
-iniX0 = int(elipse.entry_constante1.get())
-iniY0 = int(elipse.entry_constante2.get())
-iniX1 = int(elipse.entry_constante3.get())
-iniY1 = int(elipse.entry_constante4.get())
-carga0 = float(elipse.entry_constante5.get())
-carga1 = float(elipse.entry_constante6.get())
 ball1 = Ball(iniX0, iniY0, 10, ball_color1 if carga0 > 0 else ball_color2, initial_velocity1, 1, carga0)
 ball2 = Ball(iniX1, iniY1, 30, ball_color1 if carga1 > 0 else ball_color2, initial_velocity2, 100, carga1)
 

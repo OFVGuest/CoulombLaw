@@ -102,7 +102,7 @@ while running:
     distance_squared = np.dot(distance, distance)
     distance_magnitude = np.sqrt(distance_squared)
 
-    if abs(distance_magnitude) > 5:
+    if abs(distance_magnitude) > 20:
         force_direction = distance / distance_magnitude
         force_magnitude = (9 * 10**9) * ball1.charge * ball2.charge / distance_squared  # Magnitud de la fuerza
 

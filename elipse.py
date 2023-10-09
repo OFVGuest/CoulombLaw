@@ -3,17 +3,20 @@ import tkinter as tk
 constante1,constante2,constante3,constante4, constante5, constante6 = 300,400,500,400,-0.0005,0.0005
 # Función para manejar el cierre de la ventana
 def cerrar_ventana():
+    # Definimos todas las variables globales
     global constante1, constante2, constante3, constante4, constante5, constante6
-    try:
-        constante1 = float(entry_constante1.get())
-        constante2 = float(entry_constante2.get())
-        constante3 = float(entry_constante3.get())
-        constante4 = float(entry_constante4.get())
-        constante5 = float(entry_constante5.get())
-        constante6 = float(entry_constante6.get())
-    except:
-        pass
+    global entry_constante1, entry_constante2, entry_constante3, entry_constante4, entry_constante5, entry_constante6, root
+    
+    constante1 = float(entry_constante1.get())
+    constante2 = float(entry_constante2.get())
+    constante3 = float(entry_constante3.get())
+    constante4 = float(entry_constante4.get())
+    constante5 = float(entry_constante5.get())
+    constante6 = float(entry_constante6.get())
+
+    # Destruimos la ventana
     root.quit()
+    root.destroy()
 
 # Crear la ventana principal
 root = tk.Tk()
